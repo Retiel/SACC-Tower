@@ -90,9 +90,14 @@
 ### 📚 Documentation Interface
 - Split-panel view: document list + content preview
 - Search and filter by document type
-- Categories: Technical Documentation, Research Papers, Technical Guides
-- Expandable sections for Key Concepts, Code Examples, Related Resources
-- Actions to cite in specs and add to project
+- **Source filter**: Knowledge Base (ServiceNow) / External Connector / All
+- **Source Name filter**: Search-enabled dropdown with all registered providers
+- **Primary source**: ServiceNow Knowledge Base (kb_knowledge table via Table API)
+- **Secondary source**: Configurable File Connector with 35+ registered external sources
+- Categories: ServiceNow Official, Community, API Reference, Developer Tools, Academic & Research, Industry Standards, General Reference
+- Detail panel shows: Source Type, Category, **Source Owner** (entity name + description), URL, Article metadata
+- Expandable sections for Tags
+- Actions to open source, cite in specs, and add to project
 
 ---
 
