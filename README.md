@@ -87,6 +87,23 @@
 - Code suggestions with best practices
 - GlideRecord, Flow, and API guidance
 
+### 🤖 AI Code Assistant
+- **Multi-model LLM selection** (max 4): Click pill badges to select up to 4 AI models simultaneously
+- **Parallel chat columns**: Each selected model gets its own chat column for side-by-side comparison
+- **16 pre-registered models** across 7 providers:
+  - OpenAI: GPT-4o, GPT-4o Mini, o1, DALL·E 3, Sora
+  - Anthropic: Claude Sonnet 4, Claude Opus 4, Claude 3.5 Haiku
+  - Google: Gemini 2.5 Pro, Gemini 2.5 Flash
+  - Microsoft/GitHub: Copilot, Azure OpenAI
+  - Meta: Llama 3.3 70B | Mistral AI: Mistral Large, Codestral
+  - xAI: Grok-3 | Specialized: Perplexity Sonar, Cohere Command R+
+- **Add Model button**: Register new AI models via modal popup with full API + credential configuration
+- **AES-256-GCM encryption**: All API keys, tokens, and secrets encrypted at rest using Web Crypto API with PBKDF2 key derivation (100K iterations, SHA-256). AES-512 does not exist; AES-256 is the maximum AES standard.
+- **Dynamic credential form**: Fields adapt based on auth type (API Key → key field, OAuth2 → client ID + secret + token URL, Bearer → token field)
+- Expanded textarea (5 rows) for longer prompts
+- Context scope selector for ServiceNow application scoping
+- Clear Chat button resets all model conversations
+
 ### 📚 Documentation Interface
 - Split-panel view: document list + content preview
 - Search and filter by document type
