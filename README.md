@@ -92,6 +92,10 @@
 - Search and filter by document type
 - **Source filter**: Knowledge Base (ServiceNow) / External Connector / All
 - **Source Name filter**: Search-enabled dropdown with all registered providers
+- **Add Source button**: Opens a modal popup to register new external documentation sources on-the-fly
+  - All fields mandatory with validation feedback
+  - Collects: Source Name, Description, URL, Category, Tags, Auth requirement, Owner Name, Owner Description
+  - On submit: registers the source in the runtime connector and refreshes the list with success feedback
 - **Primary source**: ServiceNow Knowledge Base (kb_knowledge table via Table API)
 - **Secondary source**: Configurable File Connector with 35+ registered external sources
 - Categories: ServiceNow Official, Community, API Reference, Developer Tools, Academic & Research, Industry Standards, General Reference
