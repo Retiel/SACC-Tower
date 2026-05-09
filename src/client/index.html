@@ -1,0 +1,51 @@
+<html class="-polaris">
+  <head>
+    <title>Super Admin Command Center</title>
+    <sdk:now-ux-globals></sdk:now-ux-globals>
+    <script>
+      // Array.from polyfill for RecordProvider compatibility
+      (function() {
+        var originalFrom = Array.from;
+        Array.from = function(arrayLike) {
+          if (arrayLike instanceof Set) {
+            var arr = [];
+            arrayLike.forEach(function(v) { arr.push(v); });
+            return arr;
+          }
+          if (arrayLike instanceof Map) {
+            var arr = [];
+            arrayLike.forEach(function(v, k) { arr.push([k, v]); });
+            return arr;
+          }
+          if (arrayLike && arrayLike.length !== undefined) {
+            if (arguments.length > 1) {
+              var mapFn = arguments[1];
+              var thisArg = arguments[2];
+              var arr = [];
+              for (var i = 0; i < arrayLike.length; i++) {
+                arr.push(mapFn.call(thisArg, arrayLike[i], i));
+              }
+              return arr;
+            }
+            return originalFrom ? originalFrom.apply(this, arguments) : [].slice.call(arrayLike);
+          }
+          if (arrayLike && typeof arrayLike[Symbol.iterator] === 'function') {
+            var arr = [];
+            var iter = arrayLike[Symbol.iterator]();
+            var next = iter.next();
+            while (!next.done) {
+              arr.push(next.value);
+              next = iter.next();
+            }
+            return arr;
+          }
+          return originalFrom ? originalFrom.apply(this, arguments) : [];
+        };
+      })();
+    </script>
+    <script src="main.tsx?uxpcb=$[UxFrameworkScriptables.getFlushTimestamp()]" type="module"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

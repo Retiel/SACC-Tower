@@ -1,0 +1,9 @@
+{
+    "scope": "x_920325_sacctower",
+    "scopeId": "3230e1b093b84f1042fd30018bba10b7",
+    "name": "SACC Tower",
+    "tsconfigPath": "./src/server/tsconfig.json",
+    "accessControls": {
+        "runtimeAccessTracking": "enforcing"
+    }
+}
